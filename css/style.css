@@ -1,0 +1,77 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: white;
+}
+
+.container {
+    margin: auto;
+    text-align: center;
+}
+
+input[type=number] {
+    font-size: 24px;
+    text-align: center;
+}
+
+input.wrong {
+    outline-color: red;
+    background-color: #ffc1be;
+    color: red;
+}
+
+span.wrong {
+    color: red;
+}
+
+table {
+    text-align: center;
+    margin: 50px auto;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid gray;
+}
+
+th,
+td {
+    padding: 10px 30px;
+}
+
+.congrats {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.congrats>h1 {
+    color: white;
+    font-size: 100px;
+    font-weight: normal;
+}
+
+.congrats>button.reset {
+    background-color: #f15619;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 18px;
+}
+
+.show {
+    display: flex;
+}
+
+.label-congrats,
+.reset {
+    align-self: center;
+}
