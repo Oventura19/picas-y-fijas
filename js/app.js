@@ -40,7 +40,7 @@ function validateNumber(number) {
     }
 }
 
-//Función para inicializar el número secreto:
+//Función para inicializar el juego
 function initialize() {
     //Obtener un número nuevo aleatorio:
     randomNumber = newRandomNumber();
@@ -52,9 +52,6 @@ function initialize() {
     //Ocultar el mensaje de Ganaste:
     $(".congrats").removeClass("show");
 }
-$(document).ready(function() {
-    initialize();
-});
 
 //Cuerpo del código del juego
 $("#new-number").keypress(function(e) {
@@ -80,7 +77,11 @@ $("#new-number").keypress(function(e) {
     }
 });
 
-//Inicializar el juego
+//Inicializar el juego pulsando el botón Jueva Nuevamente
+$(document).ready(function() {
+    initialize();
+});
+
 $(".reset").click(function() {
     initialize();
 });
