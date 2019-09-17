@@ -63,14 +63,14 @@ $("#new-number").keypress(function(e) {
             $(this).val("");
             if (fija === randomNumber.length) {
                 $(".congrats").addClass("show");
-            } else {
-                var rowTemplate = Handlebars.compile($('#results-row-template').html());
-                $(".results > tbody").prepend(rowTemplate({
-                    number: newNumber.join(""),
-                    pica: pica,
-                    fija: fija
-                }));
             }
+            var rowTemplate = Handlebars.compile($('#results-row-template').html());
+            $(".results > tbody").prepend(rowTemplate({
+                number: newNumber.join(""),
+                pica: pica,
+                fija: fija
+            }));
+
         } else {
             $("#new-number, p > span").addClass("wrong");
         }
